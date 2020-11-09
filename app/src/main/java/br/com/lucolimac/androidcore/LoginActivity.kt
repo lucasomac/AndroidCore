@@ -12,5 +12,6 @@ class LoginActivity : AppCompatActivity() {
         btRegister.setOnClickListener {
             startActivity(Intent(this, CadastroActivity::class.java))
         }
+
     }
 }
