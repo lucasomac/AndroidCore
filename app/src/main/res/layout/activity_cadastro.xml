@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CadastroActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/tbCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_bar"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:title="@string/register"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiNameRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_lados_login"
+                android:layout_marginTop="@dimen/margin_lados_login"
+                android:layout_marginRight="@dimen/margin_lados_login"
+                android:hint="@string/name"
+                android:textColorHint="@color/edit_text_hint_label">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNameRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:background="@color/white"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/edit_text_text"
+                    android:textSize="8pt" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiEmailRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_lados_login"
+                android:layout_marginTop="@dimen/margin_lados_login"
+                android:layout_marginRight="@dimen/margin_lados_login"
+                android:hint="@string/email"
+                android:textColorHint="@color/edit_text_hint_label">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmailRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:background="@color/white"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/edit_text_text"
+                    android:textSize="8pt" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiPasswordRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_lados_login"
+                android:layout_marginTop="@dimen/margin_lados_login"
+                android:layout_marginRight="@dimen/margin_lados_login"
+                android:hint="@string/password"
+                android:textColorHint="@color/edit_text_hint_label"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPasswordRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:background="@color/white"
+                    android:inputType="textPassword"
+                    android:textColor="@color/edit_text_text"
+                    android:textSize="8pt" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiPasswordConfirmRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_lados_login"
+                android:layout_marginTop="@dimen/margin_lados_login"
+                android:layout_marginRight="@dimen/margin_lados_login"
+                android:hint="@string/password"
+                android:textColorHint="@color/edit_text_hint_label"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPasswordConfirmRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:background="@color/white"
+                    android:inputType="textPassword"
+                    android:textColor="@color/edit_text_text"
+                    android:textSize="8pt" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btRegisterRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_lados_login"
+                android:layout_marginTop="250dp"
+                android:layout_marginRight="@dimen/margin_lados_login"
+                android:backgroundTint="@color/button_login"
+                android:text="@string/register"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

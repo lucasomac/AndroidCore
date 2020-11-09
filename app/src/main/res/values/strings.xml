@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AndroidCore</string>
+    <!--    String de login-->
+    <string name="login">LOG IN</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="or"> OR </string>
+    <string name="digital_foods">Digital House Foods</string>
+    <string name="register">REGISTER</string>
+    <string name="name">Name</string>
+</resources>
