@@ -10,10 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.lucolimac.androidcore.R
 
 
-class PratoAdapter(
-    private val listaEntrada: List<Prato>,
-    val listener: OnClickPratoListener
-) :
+class PratoAdapter(private val listaEntrada: List<Prato>, val listener: OnClickPratoListener) :
     RecyclerView.Adapter<PratoAdapter.PratoViewHolder>() {
 
     override fun onCreateViewHolder(

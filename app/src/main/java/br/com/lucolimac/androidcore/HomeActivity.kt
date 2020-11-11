@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import br.com.lucolimac.androidcore.domain.PratoAdapter
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -20,6 +21,7 @@ class HomeActivity : AppCompatActivity(), PratoAdapter.OnClickPratoListener {
             layoutManager = LinearLayoutManager(context)
             adapter = pratoAdapter
         }
+
     }
 
     fun getListaPrato(): ArrayList<Prato> {
@@ -34,9 +36,8 @@ class HomeActivity : AppCompatActivity(), PratoAdapter.OnClickPratoListener {
 
     override fun onClickPrato(position: Int) {
         val prato: Prato = listaPratos.get(position)
-//        prato.local = "Presente"
-        pratoAdapter.notifyItemChanged(position)
+////        prato.local = "Presente"
+//        pratoAdapter.notifyItemChanged(position)
         Toast.makeText(this, prato.local, Toast.LENGTH_LONG).show()
     }
-
 }
