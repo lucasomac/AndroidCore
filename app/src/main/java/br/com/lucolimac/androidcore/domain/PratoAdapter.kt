@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.lucolimac.androidcore.R
 
 
-class PratoAdapter(private val listaEntrada: List<Prato>, val listener: OnClickPratoListener) :
+class PratoAdapter(private val listaEntrada: List<Prato>) :
     RecyclerView.Adapter<PratoAdapter.PratoViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -34,21 +34,20 @@ class PratoAdapter(private val listaEntrada: List<Prato>, val listener: OnClickP
         return listaEntrada.size
     }
 
-    interface OnClickPratoListener {
-        fun onClickPrato(position: Int)
-    }
-
     inner class PratoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
+//        itemView.findViewById(R.id.card)setOnClickListener
+//        { this }
         val ivPrato: ImageView = itemView.findViewById(R.id.ivPrato)
         val tvNomeLocal: TextView = itemView.findViewById(R.id.tvNomeLocal)
         val tvEndereco: TextView = itemView.findViewById(R.id.tvEndereco)
         val tvHorario: TextView = itemView.findViewById(R.id.tvHorario)
         override fun onClick(v: View?) {
-            val position = adapterPosition
-            if (position != RecyclerView.NO_POSITION) {
-                listener.onClickPrato(position)
-            }
+            TODO("Not yet implemented")
         }
+    }
+
+    interface OnPratoListener {
+        fun onPratoClick(position: Int)
     }
 }
