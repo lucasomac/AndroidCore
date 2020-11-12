@@ -18,14 +18,14 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/ivPrato"
+            android:id="@+id/ivRestaurante"
             android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="247dp"
             app:srcCompat="@drawable/image1" />
 
         <TextView
-            android:id="@+id/tvNomeLocal"
+            android:id="@+id/tvNomeRestaurante"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -34,7 +34,7 @@
             android:textSize="36sp" />
 
         <TextView
-            android:id="@+id/tvEndereco"
+            android:id="@+id/tvEnderecoRestaurante"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -43,7 +43,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/tvHorario"
+            android:id="@+id/tvHorarioRestaurante"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"

@@ -32,5 +32,5 @@
         android:scrollbars="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@+id/tlHome"
-        tools:listitem="@layout/card_comida" />
+        tools:listitem="@layout/card_restaurante" />
 </LinearLayout>
