@@ -9,28 +9,49 @@ import br.com.lucolimac.androidcore.domain.RestauranteAdapter
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity(), RestauranteAdapter.OnRestauranteClickListener {
-    private val listaPratos = getListaPrato()
-    private val pratoAdapter = RestauranteAdapter(listaPratos, this)
+    private val listaRestaurantes = getListaRestaurante()
+    private val restauranteAdapter = RestauranteAdapter(listaRestaurantes, this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         setSupportActionBar(tbHome)
-        rcPratos.apply {
+        rcRestaurantes.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context)
-            adapter = pratoAdapter
+            adapter = restauranteAdapter
         }
 
     }
 
-    fun getListaPrato(): ArrayList<Restaurante> {
-        val Prato01 = Restaurante(R.drawable.image1, "PEDRA DA ARADA", "23/08/1994", "Das 09 as 18")
-        val Prato02 =
-            Restaurante(R.drawable.image2, "CAMPOS DO JORDÃO", "23/08/1994", "Das 09 as 15")
-        val Prato03 = Restaurante(R.drawable.image3, "SACRAMENTO", "23/08/1994", "Das 18 as 22")
-        val Prato04 = Restaurante(R.drawable.image4, "JALAPÃO", "23/08/1994", "Das 17 as 02")
-        val Prato05 = Restaurante(R.drawable.image5, "LITUANIA", "23/08/1994", "Das 05 as 12")
-        val lista = arrayListOf(Prato01, Prato02, Prato03, Prato04, Prato05)
+    fun getListaRestaurante(): ArrayList<Restaurante> {
+        val restaurante01 = Restaurante(
+            R.drawable.image1,
+            "Tony Roma's",
+            "Av. Lavandisca, 717 - Indianópolis, São Paulo",
+            "Fecha às 22:00"
+        )
+        val restaurante02 =
+            Restaurante(
+                R.drawable.image2,
+                "Aoyama - Moema",
+                "Alameda dos Arapanés, 532 - Moema",
+                "Fecha às 00:00"
+            )
+        val restaurante03 = Restaurante(
+            R.drawable.image3,
+            "Outback - Moema",
+            "Av. Moaci, 187, 187 - Moema, São Paulo",
+            "Fecha às 00:00"
+        )
+        val restaurante04 = Restaurante(
+            R.drawable.image4,
+            "Sí Señor!",
+            "Alameda Jauaperi, 626 - Moema",
+            "Fecha às 01:00"
+        )
+//        val restaurante05 = Restaurante(R.drawable.image5, "LITUANIA", "23/08/1994", "Das 05 as 12")
+        val lista =
+            arrayListOf(restaurante01, restaurante02, restaurante03, restaurante04)
         return lista
     }
 
