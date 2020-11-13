@@ -10,4 +10,9 @@
     <string name="name">Name</string>
     <string name="principais_pratos">Principais Pratos</string>
     <string name="nome_do_prato">Nome do Prato</string>
+    <string name="nome_do_restaurante">Nome do restaurante</string>
+    <string name="logo">logo</string>
+    <string name="arrow_back">arrow back</string>
+    <string name="endereco">Endereco</string>
+    <string name="horario">Horario</string>
 </resources>

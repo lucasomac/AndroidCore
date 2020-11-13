@@ -1,8 +1,9 @@
-package br.com.lucolimac.androidcore
+package br.com.lucolimac.androidcore.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import br.com.lucolimac.androidcore.R
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {

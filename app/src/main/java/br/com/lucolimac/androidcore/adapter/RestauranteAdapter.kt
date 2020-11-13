@@ -1,6 +1,5 @@
-package br.com.lucolimac.androidcore.domain
+package br.com.lucolimac.androidcore.adapter
 
-import Restaurante
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.lucolimac.androidcore.R
+import br.com.lucolimac.androidcore.domain.Restaurante
 
 
 class RestauranteAdapter(
@@ -17,13 +17,13 @@ class RestauranteAdapter(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): RestauranteAdapter.RestauranteViewHolder {
+    ): RestauranteViewHolder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.card_restaurante, parent, false)
         return RestauranteViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: RestauranteAdapter.RestauranteViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RestauranteViewHolder, position: Int) {
         val currentItem = listaEntrada[position]
         holder.ivRestaurante.setOnClickListener {
             mOnRestauranteClickListener.onRestauranteClick(position)
@@ -39,13 +39,10 @@ class RestauranteAdapter(
     }
 
     inner class RestauranteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        //        View.OnClickListener {
         val ivRestaurante: ImageView = itemView.findViewById(R.id.ivRestaurante)
         val tvNomeRestaurante: TextView = itemView.findViewById(R.id.tvNomeRestaurante)
         val tvEnderecoRestaurante: TextView = itemView.findViewById(R.id.tvEnderecoRestaurante)
         val tvHorarioRestaurante: TextView = itemView.findViewById(R.id.tvHorarioRestaurante)
-//        override fun onClick(v: View?) {
-//        }
     }
 
     interface OnRestauranteClickListener {

@@ -1,9 +1,10 @@
-package br.com.lucolimac.androidcore
+package br.com.lucolimac.androidcore.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import br.com.lucolimac.androidcore.R
 import kotlinx.android.synthetic.main.activity_cadastro.*
 
 
@@ -25,7 +26,6 @@ class CadastroActivity : AppCompatActivity() {
                 else -> {
                     Toast.makeText(this, "Usuário criado com sucesso", Toast.LENGTH_LONG).show()
                     startActivity(Intent(this, LoginActivity::class.java))
-//                    finish()
                 }
             }
         }
