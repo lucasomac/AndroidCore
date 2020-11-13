@@ -8,4 +8,6 @@
     <string name="digital_foods">Digital House Foods</string>
     <string name="register">REGISTER</string>
     <string name="name">Name</string>
+    <string name="principais_pratos">Principais Pratos</string>
+    <string name="nome_do_prato">Nome do Prato</string>
 </resources>
