@@ -2,6 +2,7 @@ package br.com.lucolimac.androidcore
 
 import Prato
 import Restaurante
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -27,7 +28,9 @@ class RestauranteActivity : AppCompatActivity(), PratoAdapter.OnPratoClickListen
     }
 
     override fun onPratoClick(position: Int) {
-        TODO("Not yet implemented")
+        val intent = Intent(this, PratoActivity::class.java)
+        intent.putExtra("prato", listaPratos.get(position))
+        startActivity(intent)
     }
 
     private fun getListaPrato(): ArrayList<Prato> {
