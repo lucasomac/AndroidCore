@@ -57,6 +57,7 @@ class HomeActivity : AppCompatActivity(), RestauranteAdapter.OnRestauranteClickL
 
     override fun onRestauranteClick(position: Int) {
         val intent = Intent(this, RestauranteActivity::class.java)
+        intent.putExtra("restaurante", listaRestaurantes.get(position))
         startActivity(intent)
     }
 }
