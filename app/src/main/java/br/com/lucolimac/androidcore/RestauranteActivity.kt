@@ -11,14 +11,13 @@ import kotlinx.android.synthetic.main.activity_restaurante.*
 
 class RestauranteActivity : AppCompatActivity(), PratoAdapter.OnPratoClickListener {
 
-    private var listaPratos = ArrayList<Prato>()
+    private var listaPratos = getListaPrato()
     private val pratoAdapter = PratoAdapter(listaPratos, this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_restaurante)
         val extras = intent.extras
         val restaurante = extras?.getSerializable("restaurante") as Restaurante
-        this.listaPratos = getListaPrato(restaurante)
         tvNomeRestaurante.setText(restaurante.local)
 
         rcPratos.apply {
@@ -37,12 +36,12 @@ class RestauranteActivity : AppCompatActivity(), PratoAdapter.OnPratoClickListen
         startActivity(intent)
     }
 
-    private fun getListaPrato(restaurante: Restaurante): ArrayList<Prato> {
+    private fun getListaPrato(): ArrayList<Prato> {
         val prato = Prato(
             R.drawable.image3,
             "Salada com molho Gengibre",
-            "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis.",
-            restaurante
+            "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."
+//            restaurante
         )
         return arrayListOf(prato, prato, prato, prato, prato, prato, prato, prato)
     }

@@ -11,12 +11,14 @@ class PratoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_prato)
         val extras = intent.extras
-        var prato = extras?.getSerializable("prato") as Prato
+        val prato = extras?.getSerializable("prato") as Prato
         logoPrato.setImageResource(prato.imagem)
         tvNomePrato.setText(prato.nome)
         tvDescricaoPrato.setText(prato.descricao)
         icBack.setOnClickListener {
-            onNavigateUp()
+//            Intent(this, RestauranteActivity::class.java).apply {
+//                putExtra("restaurante", prato.restaurante)
+//            }
         }
     }
 }

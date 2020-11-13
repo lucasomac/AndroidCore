@@ -20,7 +20,6 @@ class HomeActivity : AppCompatActivity(), RestauranteAdapter.OnRestauranteClickL
             layoutManager = LinearLayoutManager(context)
             adapter = restauranteAdapter
         }
-
     }
 
     fun getListaRestaurante(): ArrayList<Restaurante> {
@@ -56,8 +55,9 @@ class HomeActivity : AppCompatActivity(), RestauranteAdapter.OnRestauranteClickL
     }
 
     override fun onRestauranteClick(position: Int) {
-        val intent = Intent(this, RestauranteActivity::class.java)
-        intent.putExtra("restaurante", listaRestaurantes.get(position))
-        startActivity(intent)
+       Intent(this, RestauranteActivity::class.java).apply {
+            putExtra("restaurante", listaRestaurantes.get(position))
+            startActivity(this)
+        }
     }
 }
