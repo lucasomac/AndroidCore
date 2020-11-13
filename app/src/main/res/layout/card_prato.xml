@@ -16,6 +16,7 @@
             android:id="@+id/ivPrato"
             android:layout_width="match_parent"
             android:layout_height="210dp"
+            android:contentDescription="@string/logo"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/image1" />
 
@@ -27,11 +28,11 @@
             android:layout_gravity="center"
             android:layout_marginBottom="0dp"
             android:background="@color/white"
-            android:text="TextView"
+            android:text="@string/nome_do_prato"
             android:textAlignment="center"
             android:textColor="@color/restaurante_pratos"
             android:textSize="24sp" />
 
 
     </RelativeLayout>
-</androidx.cardview.widget.CardView><!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+</androidx.cardview.widget.CardView>

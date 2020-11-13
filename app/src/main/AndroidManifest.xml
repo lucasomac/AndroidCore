@@ -10,21 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidCore.Day">
         <activity
-            android:name=".PratoActivity"
-            android:parentActivityName=".RestauranteActivity" />
+            android:name=".ui.PratoActivity"
+            android:parentActivityName=".ui.RestauranteActivity" />
         <activity
-            android:name=".RestauranteActivity"
-            android:parentActivityName=".HomeActivity" />
-        <activity android:name=".HomeActivity" />
+            android:name=".ui.RestauranteActivity"
+            android:parentActivityName=".ui.HomeActivity" />
+        <activity android:name=".ui.HomeActivity" />
         <activity
-            android:name=".CadastroActivity"
-            android:parentActivityName=".LoginActivity">
+            android:name=".ui.CadastroActivity"
+            android:parentActivityName=".ui.LoginActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LoginActivity" />
+                android:value=".ui.LoginActivity" />
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.LoginActivity"
             android:label="Login" />
         <activity android:name=".SplashActivity">
             <intent-filter>
