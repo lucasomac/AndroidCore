@@ -1,6 +1,7 @@
 package br.com.lucolimac.androidcore
 
 import Prato
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_prato.*
@@ -11,9 +12,11 @@ class PratoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_prato)
         val extras = intent.extras
         var prato = extras?.getSerializable("prato") as Prato
-
         logoPrato.setImageResource(prato.imagem)
         tvNomePrato.setText(prato.nome)
         tvDescricaoPrato.setText(prato.descricao)
+        icBack.setOnClickListener {
+            onNavigateUp()
+        }
     }
 }

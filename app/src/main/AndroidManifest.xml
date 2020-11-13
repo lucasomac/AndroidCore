@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidCore.Day">
-        <activity android:name=".PratoActivity"></activity>
-        <activity android:name=".RestauranteActivity" />
+        <activity
+            android:name=".PratoActivity"
+            android:parentActivityName=".RestauranteActivity" />
+        <activity
+            android:name=".RestauranteActivity"
+            android:parentActivityName=".HomeActivity" />
         <activity android:name=".HomeActivity" />
         <activity
             android:name=".CadastroActivity"
